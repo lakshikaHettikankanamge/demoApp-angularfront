@@ -1,0 +1,43 @@
+<h1>My Organizations</h1>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+
+        <th>View users</th>
+        <th>Create User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--   for (Todo todo: todos) {  -->
+      <tr *ngFor="let organization of organizations">
+        <td>{{ organization.name }}</td>
+        <td>{{ organization.description }}</td>
+
+        <td>
+          <button (click)="viewUsers(organization.id)" class="btn btn-success">
+            Users
+          </button>
+        </td>
+        <td>
+          <button
+            (click)="createOrganizationUsers(organization.id)"
+            class="btn btn-primary"
+          >
+            Add Users
+          </button>
+        </td>
+      </tr>
+      <!-- } -->
+    </tbody>
+  </table>
+
+  <div class="row">
+    <button (click)="createOrganization()" class="btn btn-success">
+      Add Organizations
+    </button>
+  </div>
+</div>

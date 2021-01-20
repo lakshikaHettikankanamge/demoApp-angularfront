@@ -1,0 +1,23 @@
+<H1>Organization</H1>
+
+<div class="container">
+  <!-- <div class="alert alert-warning" *ngIf="orgaizationForm.dirty && orgaizationForm.invalid">Enter valid values</div>
+  <div class="alert alert-warning" *ngIf="orgaizationForm.dirty && targetDate.invalid">Enter valid Target Date</div>
+  <div class="alert alert-warning" *ngIf="orgaizationForm.dirty && description.invalid">Enter atleast 5 characters in Description</div> -->
+
+  <form [formGroup]="createUserForm" (ngSubmit)="saveuser()">
+    <fieldset class="form-group">
+      <label>email</label>
+      <input
+        type="text"
+        [formControlName]="'email'"
+        class="form-control"
+        style="margin-top: 5px"
+        placeholder="Title"
+      />
+    </fieldset>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <button (click)="discardUser()" class="btn btn-success">Discard</button>
+  </form>
+</div>
