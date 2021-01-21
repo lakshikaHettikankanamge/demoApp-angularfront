@@ -19,7 +19,7 @@ export class CreateOrganizationComponent implements OnInit {
     private myorganizations: MyorganizationsService
   ) {
     this.organizationPayload = {
-      organizationName: '',
+      name: '',
       description: ''
     };
   }
@@ -32,7 +32,7 @@ export class CreateOrganizationComponent implements OnInit {
   }
 
   saveorgaization() {
-    this.organizationPayload.organizationName = this.createOrganizationForm.get(
+    this.organizationPayload.name = this.createOrganizationForm.get(
       'organizationName'
     )!.value;
 
@@ -42,7 +42,7 @@ export class CreateOrganizationComponent implements OnInit {
 
     this.myorganizations.createOrganization(this.organizationPayload).subscribe(
       data => {
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/home');
       },
       error => {
         throwError(error);

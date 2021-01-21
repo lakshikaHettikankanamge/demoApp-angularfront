@@ -10,9 +10,9 @@ import { CreateUserComponent } from './organization/create-user/create-user.comp
 const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'organization/:orgId', component: ViewUsersComponent },
+  { path: 'organizations/:orgId', component: ViewUsersComponent },
   { path: 'createuser/:orgId', component: CreateUserComponent },
-  { path: 'organization', component: CreateOrganizationComponent },
+  { path: 'organizations', component: CreateOrganizationComponent },
   { path: 'home', component: HomeComponent },
   { path: '', component: LoginComponent }
 ];

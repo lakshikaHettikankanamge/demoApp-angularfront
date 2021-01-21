@@ -45,7 +45,7 @@ export class CreateUserComponent implements OnInit {
       .createOrganizationUsers(this.CreateUserPayload, this.orgId)
       .subscribe(
         data => {
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/home');
         },
         error => {
           throwError(error);
@@ -54,6 +54,6 @@ export class CreateUserComponent implements OnInit {
   }
 
   discardUser() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/home');
   }
 }

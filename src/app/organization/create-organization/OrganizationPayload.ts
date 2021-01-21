@@ -1,4 +1,4 @@
 export class OrganizationPayload {
-  organizationName: string;
+  name: string;
   description: string;
 }
