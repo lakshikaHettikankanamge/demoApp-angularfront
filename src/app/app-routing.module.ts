@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewUsersComponent } from './organization/view-users/view-users.component';
 import { CreateOrganizationComponent } from './organization/create-organization/create-organization.component';
 import { CreateUserComponent } from './organization/create-user/create-user.component';
+import { ImageComponent } from './Image/image.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'createuser/:orgId', component: CreateUserComponent },
   { path: 'organizations', component: CreateOrganizationComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', component: LoginComponent }
+  { path: '', component: LoginComponent },
+  { path: 'image', component: ImageComponent}
 ];
 
 @NgModule({
